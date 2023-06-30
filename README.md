@@ -14,7 +14,13 @@ Kursus-kursus di Udemy mencakup beragam topik, termasuk ilmu komputer, bisnis, k
 ### Problem Statements
  Berdasarkan masalah diatas maka dapat ditarik suatu rumusan masalah yaitu:
  - Sistem rekomendasi apa yang cocok dalam penerapan kasus proyek ini ?
- - Bagaimana cara membuat sistem rekomendasi kursus online pada Udemy Courses ?
+ - Bagaimana cara membuat sistem rekomendasi kursus online pada Udemy Courses
+   
+### Goals
+Berikut tujuan dari proyek ini:
+- Membuat sistem rekomendasi kursus online untuk pengguna di Udemy.
+- Memberikan rekomendasi untuk kursus online Udemy berdasarkan kriteria yang diinginkan pengguna.
+- Memberikan remoendasi kelas berdasarkan bidang yang diminati.
 
 
   
