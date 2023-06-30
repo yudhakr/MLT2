@@ -40,7 +40,7 @@ Solusi yang dapat dilakukan untuk mencapai tujuan proyek ini diantaranya:
     - Inisialisasi nilai K (banyak tetangga/kelompok).
     - Pada setiap data:
       - Hitung _euclidean distance_ antara kueri yang diberikan dan contoh yang ada pada data tersebut dengan rumus berikut:
-        ![Rumus Euclidean Distance](https://user-images.githubusercontent.com/44900042/140647363-4f4595c1-1c5a-4ef9-b4a3-e247014bdca2.png)
+        $$d(xi, x1) = √(x₁ − xu)² + (xi2 − X12)² + ... + (Tip − Xlp) $$
       - Tambahkan jarak dan urutan dari contoh pada koleksi yang berurutan.
     - Pilih entri K paling awal pada koleksi yang berurutan.
     - Dapatkan label dari entri K yang dipilih.
@@ -55,9 +55,12 @@ Solusi yang dapat dilakukan untuk mencapai tujuan proyek ini diantaranya:
 
   - Sistem rekomendasi berbasis algoritma _cosine similarity_. Algoritma ini dipilih karena relatif mudah digunakan dan digunakan sebagai pembanding sistem rekomendasi yang menggunakan model. _Cosine similarity_ secara singkat, digunakan untuk mengukur kemiripan antara dua buah vektor dan kesamaan arahnya dengan cara menghitung nilai sudut kosinus dari kedua vektor. Rumus yang digunakan sebagai berikut:
 
-    ![Rumus Cosine Similarity](https://user-images.githubusercontent.com/44900042/140647871-12f552ff-d2a3-42a9-ad39-91aeb86bf831.png)
+ $$ k(v1, v2) = (v1 . v2) / ||v1|| ||v2|| $$
 
-    Nilai x, y adalah nilai vektor dan k adalah nilai _cosine similarity_ dari vektor x dan y.
+dimana :
+- v1 dan v2 adalah vektor yang akan dibandingkan.
+- (v1 . v2) adalah hasil perkalian dot product antara vektor A dan B.
+- ||v1|| dan ||v2|| adalah panjang (magnitude) dari vektor A dan B secara berturut-turut.
 
 ## Data Understanding
   
