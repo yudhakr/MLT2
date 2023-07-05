@@ -92,6 +92,7 @@ Gambar di bawah ini merupakan sampel dari dataset pada berkas `udemy_courses.csv
 
 
 Kemudian informasi type dataset pada berkas
+
 <img width="277" alt="2" src="https://github.com/yudhakr/MLT2/assets/84507343/3c13bdbc-f991-42f2-bdff-0ef3875f8785">
 
 
