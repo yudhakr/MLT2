@@ -64,4 +64,34 @@ dimana :
 
 ## Data Understanding
   
-  
+  <img width="743" alt="udemy" src="https://github.com/yudhakr/MLT2/assets/84507343/e29dec4a-5007-4d8e-b58d-c98bca67f223">
+
+
+  Tabel di bawah ini merupakan informasi dari dataset yang digunakan:
+
+| Jenis                   | Keterangan                                                                                       |
+| ----------------------- | ------------------------------------------------------------------------------------------------ |
+| Sumber                  | [Kaggle Dataset: Udemy Courses](https://www.kaggle.com/andrewmvd/udemy-courses)                  |
+| Lisensi                 | License was not specified at source                                                              |
+| Kategori                | Bisnis, Edukasi, Komunitas Online                                                                |
+| Rating Penggunaan       | 10.0 (Gold)                                                                                      |
+| Jenis dan Ukuran Berkas | zip (694 kB)                                                                                     |
+
+
+Gambar di bawah ini merupakan sampel dari dataset pada berkas `udemy_courses.csv`:
+
+|   |   | course_id |                                      course_title |                                               url | is_paid | price | num_subscribers | num_reviews | num_lectures |              level | content_duration |  published_timestamp |          subject |
+|---|--:|----------:|--------------------------------------------------:|--------------------------------------------------:|--------:|------:|----------------:|------------:|-------------:|-------------------:|-----------------:|---------------------:|-----------------:|
+|   | 0 |   1070968 |                Ultimate Investment Banking Course | https://www.udemy.com/ultimate-investment-bank... |    True |   200 |            2147 |          23 |           51 |         All Levels |              1.5 | 2017-01-18T20:58:58Z | Business Finance |
+|   | 1 |   1113822 | Complete GST Course & Certification - Grow You... |     https://www.udemy.com/goods-and-services-tax/ |    True |    75 |            2792 |         923 |          274 |         All Levels |             39.0 | 2017-03-09T16:34:20Z | Business Finance |
+|   | 2 |   1006314 | Financial Modeling for Business Analysts and C... | https://www.udemy.com/financial-modeling-for-b... |    True |    45 |            2174 |          74 |           51 | Intermediate Level |              2.5 | 2016-12-19T19:26:30Z | Business Finance |
+|   | 3 |   1210588 | Beginner to Pro - Financial Analysis in Excel ... | https://www.udemy.com/complete-excel-finance-c... |    True |    95 |            2451 |          11 |           36 |         All Levels |              3.0 | 2017-05-30T20:07:24Z | Business Finance |
+|   | 4 |   1011058 |      How To Maximize Your Profits Trading Options | https://www.udemy.com/how-to-maximize-your-pro... |    True |   200 |            1276 |          45 |           26 | Intermediate Level |              2.0 | 2016-12-13T14:57:18Z | Business Finance |
+|   |   |           |                                                   |                                                   |         |       |                 |             |              |                    |                  |                      |                  |
+
+
+
+Kemudian informasi type dataset pada berkas
+<img width="277" alt="2" src="https://github.com/yudhakr/MLT2/assets/84507343/3c13bdbc-f991-42f2-bdff-0ef3875f8785">
+
+
