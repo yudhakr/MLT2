@@ -113,10 +113,11 @@ Dataset ini menyediakan informasi penting tentang setiap kursus online, sehingga
 Beberapa Visualisasi dari dataset yang digunakan :
 - Visualisasi dengan Data Numerik
   <img width="883" alt="visual 1" src="https://github.com/yudhakr/MLT2/assets/84507343/4640a0a5-0c03-4248-85ba-5d671c50337e">
-  __Gambar 1__ : Meripakan visualisasi Penerapan Distribusi pada kolom price (Harga)
+  __Gambar 1__ : Merupakan visualisasi Penerapan Distribusi pada kolom price (Harga)
   
 <img width="888" alt="visual 2" src="https://github.com/yudhakr/MLT2/assets/84507343/886e49ea-1b87-47ac-9a7f-7546f8814846">
-__Gambar 2__ :
+
+__Gambar 2__ : Merupakan numerik pada kolom  (Jumlah Berlangganan)
 
 - Visualisasi dengan Data Kategori
   
