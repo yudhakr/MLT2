@@ -142,12 +142,11 @@ Seperti yang sudah dijelaskan pada bagian _Solution approach_, berikut adalah ta
 
   - Menghitung nilai _Inverse Document Frequency_ dari sebuah kata/kalimat dalam satu set dokumen. Semakin dekat nilainya ke 0 maka semakin umum sebuah kata/kalimat. Metrik ini dirumuskan sebagai berikut:
     
-    
+    $$tf(t,D) = log(N / count(d ϵ D:t ϵ d) $$
 
   - Menghitung nilai TF-IDF. Hal ini dilakukan dengan cara mengalikan nilai TF dengan nilai IDF untuk menentukan seberapa relevan kata/kalimat tersebut dalam suatu dokumen. Secara matematis dirumuskan sebagai berikut:
     
-    ![Rumus TF-IDF](https://user-images.githubusercontent.com/44900042/140648332-7f079785-0e4a-434f-adca-f5e6d5a74f6a.png)
-
+    $$tf idf(t,d,D) = tf(t,d).idf(t,D) $$
 
 
 
