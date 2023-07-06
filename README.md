@@ -102,13 +102,15 @@ Berkas udemy_courses.csv berisi informasi lengkap tentang kursus-kursus online y
 1. Kolom is_paid berisi informasi apakah kursus tersebut berbayar atau gratis, dengan tipe data boolean.
 1. Kolom price berisi harga kursus dalam mata uang dolar.
 1. Kolom num_subscribers berisi jumlah pengguna yang berlangganan pada kursus tersebut.
-Kolom num_reviews berisi jumlah ulasan yang diberikan oleh pengguna yang berlangganan pada kursus tersebut.
-Kolom num_lectures berisi jumlah pengajar atau materi yang ada dalam kursus tersebut.
-Kolom level berisi tingkat kesulitan dari kursus, seperti "Pemula", "Menengah", atau "Mahir".
-Kolom content_duration berisi durasi total konten dalam kursus tersebut.
-Kolom published_timestamp berisi waktu publikasi atau tanggal kursus tersebut diterbitkan.
-Kolom subject berisi subjek atau topik yang diajarkan dalam kursus tersebut.
+1. Kolom num_reviews berisi jumlah ulasan yang diberikan oleh pengguna yang berlangganan pada kursus tersebut.
+1. Kolom num_lectures berisi jumlah pengajar atau materi yang ada dalam kursus tersebut.
+1. Kolom level berisi tingkat kesulitan dari kursus, seperti "Pemula", "Menengah", atau "Mahir".
+1. Kolom content_duration berisi durasi total konten dalam kursus tersebut.
+1. Kolom published_timestamp berisi waktu publikasi atau tanggal kursus tersebut diterbitkan.
+1. Kolom subject berisi subjek atau topik yang diajarkan dalam kursus tersebut.
 Dataset ini menyediakan informasi penting tentang setiap kursus online, sehingga dapat digunakan untuk analisis, evaluasi, atau pengembangan sistem rekomendasi dalam konteks pembelajaran online.
+
+Beberapa Visualisasi dari dataset yang digunakan :
 
 
 
