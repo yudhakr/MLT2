@@ -148,6 +148,8 @@ Seperti yang sudah dijelaskan pada bagian _Solution approach_, berikut adalah ta
     
     $$tf idf(t,d,D) = tf(t,d).idf(t,D) $$
 
+## Modeling
+
 
 
 
