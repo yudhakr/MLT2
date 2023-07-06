@@ -120,11 +120,33 @@ __Gambar 1__ : Merupakan visualisasi Penerapan Distribusi pada kolom price (Harg
 
 __Gambar 2__ : Merupakan numerik pada kolom  (Jumlah Berlangganan)
 
+<img width="842" alt="6" src="https://github.com/yudhakr/MLT2/assets/84507343/60cebdbd-dc7e-4e8d-8d90-51758997ba1c">
+
+__Gambar 3__ : Menjelaskan Distribusi label price dengan label subjek berdasarkan tipe kursus seperti Business Finance,Graphic Design, Musical Instruments, dan Web Development.
+
 - Visualisasi dengan Data Kategori
   
 <img width="592" alt="10" src="https://github.com/yudhakr/MLT2/assets/84507343/8e584b8c-9de4-41f4-b095-c6bcf5ef6e6a">
  
-  __Gambar 2__ : Kategori Level Kelas dengan banyaknya juamlah yang berlangganan (Subscribe)
+  __Gambar 4__ : Kategori Level Kelas dengan banyaknya juamlah yang berlangganan (Subscribe)
+
+  
+Seperti yang sudah dijelaskan pada bagian _Solution approach_, berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
+- Membersihkan data duplikasi. Hal ini dilakukan karena data duplikat dapat menyebabkan munculnya redundansi dalam hasil sistem rekomendasi yang akan dibuat. Oleh karena itu data duplikasi ini perlu dihilangkan karena data tersebut sudah terdapat dalam dataset. Proses ini dilakukan dengan menggunakan fungsi `drop_duplicates` dari _dataframe_ dataset.
+- Membersihkan teks judul pada kolom `course_title` dari `stopwords`. Hal ini dilakukan untuk mencegah redundansi pada data teks judul dengan cara menghapus informasi tingkat rendah sehingga sistem rekomendasi nantinya dapat fokus pada informasi yang lebih penting. Selain itu, menghapus `stopwords` dapat mengurangi ukuran dataset. Proses ini dilakukan dengan menggunakan fungsi `remove_stopwords` pada modul [neattext](https://blog.jcharistech.com/neattext/).
+- Membersihkan teks judul pada kolom course_title dari karakter spesial. Hal ini dilakukan untuk mencegah kebingungan sistem rekomendasi dengan cara menghapus karakter khusus yang memiliki informasi rendah. Proses ini dilakukan dengan menggunakan fungsi `remove_special_characters` pada modul [neattext](https://blog.jcharistech.com/neattext/).
+- Konversi teks judul yang telah dibersihkan menjadi vektor TF-IDF. Hal ini dilakukan untuk melakukan ekstraksi fitur pada teks judul kursus yang nantinya akan dikonversi menjadi vektor dengan nilai numerik. Proses ini dilakukan dengan menggunakan fungsi [TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) pada modul scikit-learn. Proses perhitungannya yaitu:
+  - Menghitung nilai _Term Frequency_ dari sebuah kata atau kalimat dalam dokumen. Salah satu cara yang paling sederhana adalah menghitung jumlah awal kata/kalimat yang muncul dalam dokumen kemudian menyesuaikan frekuensi berdasarkan panjang dokumen. Secara matematis, nilainya akan dihitung dengan rumus berikut:
+  
+     $$tf(t,d) = log(1 + freg(t,d)) $$
+
+  - Menghitung nilai _Inverse Document Frequency_ dari sebuah kata/kalimat dalam satu set dokumen. Semakin dekat nilainya ke 0 maka semakin umum sebuah kata/kalimat. Metrik ini dirumuskan sebagai berikut:
+    
+    
+
+  - Menghitung nilai TF-IDF. Hal ini dilakukan dengan cara mengalikan nilai TF dengan nilai IDF untuk menentukan seberapa relevan kata/kalimat tersebut dalam suatu dokumen. Secara matematis dirumuskan sebagai berikut:
+    
+    ![Rumus TF-IDF](https://user-images.githubusercontent.com/44900042/140648332-7f079785-0e4a-434f-adca-f5e6d5a74f6a.png)
 
 
 
