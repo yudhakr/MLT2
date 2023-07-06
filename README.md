@@ -87,12 +87,32 @@ Gambar di bawah ini merupakan sampel dari dataset pada berkas `udemy_courses.csv
 |   | 2 |   1006314 | Financial Modeling for Business Analysts and C... | https://www.udemy.com/financial-modeling-for-b... |    True |    45 |            2174 |          74 |           51 | Intermediate Level |              2.5 | 2016-12-19T19:26:30Z | Business Finance |
 |   | 3 |   1210588 | Beginner to Pro - Financial Analysis in Excel ... | https://www.udemy.com/complete-excel-finance-c... |    True |    95 |            2451 |          11 |           36 |         All Levels |              3.0 | 2017-05-30T20:07:24Z | Business Finance |
 |   | 4 |   1011058 |      How To Maximize Your Profits Trading Options | https://www.udemy.com/how-to-maximize-your-pro... |    True |   200 |            1276 |          45 |           26 | Intermediate Level |              2.0 | 2016-12-13T14:57:18Z | Business Finance |
-|   |   |           |                                                   |                                                   |         |       |                 |             |              |                    |                  |                      |                  |
 
 
 
 Kemudian informasi type dataset pada berkas
 
 <img width="277" alt="2" src="https://github.com/yudhakr/MLT2/assets/84507343/3c13bdbc-f991-42f2-bdff-0ef3875f8785">
+
+Berkas udemy_courses.csv berisi informasi lengkap tentang kursus-kursus online yang tersedia di platform Udemy. Dataset ini sangat terorganisir, tidak ada nilai yang kosong, dan mengandung kolom-kolom berikut dengan penjelasan masing-masing:
+
+1. Kolom course_id berisi ID unik untuk setiap kursus dalam dataset.
+1. Kolom course_title berisi judul dari setiap kursus.
+1. Kolom url berisi URL yang mengarah ke kursus tersebut.
+1. Kolom is_paid berisi informasi apakah kursus tersebut berbayar atau gratis, dengan tipe data boolean.
+1. Kolom price berisi harga kursus dalam mata uang dolar.
+1. Kolom num_subscribers berisi jumlah pengguna yang berlangganan pada kursus tersebut.
+Kolom num_reviews berisi jumlah ulasan yang diberikan oleh pengguna yang berlangganan pada kursus tersebut.
+Kolom num_lectures berisi jumlah pengajar atau materi yang ada dalam kursus tersebut.
+Kolom level berisi tingkat kesulitan dari kursus, seperti "Pemula", "Menengah", atau "Mahir".
+Kolom content_duration berisi durasi total konten dalam kursus tersebut.
+Kolom published_timestamp berisi waktu publikasi atau tanggal kursus tersebut diterbitkan.
+Kolom subject berisi subjek atau topik yang diajarkan dalam kursus tersebut.
+Dataset ini menyediakan informasi penting tentang setiap kursus online, sehingga dapat digunakan untuk analisis, evaluasi, atau pengembangan sistem rekomendasi dalam konteks pembelajaran online.
+
+
+
+
+
 
 
