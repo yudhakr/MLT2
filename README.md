@@ -220,19 +220,34 @@ def precision(query:pd.DataFrame, rec_result:pd.DataFrame):
 
 - Nilai _precision_ model KNN
   
-  <img width="278" alt="15" src="https://github.com/yudhakr/MLT2/assets/84507343/fb7fceb8-1016-4f6c-954c-fd6a0a720506">
+ 
+<img width="432" alt="15" src="https://github.com/yudhakr/MLT2/assets/84507343/ff09d45c-b4dd-40ba-83c4-a7c58ce37123">
+
 
 
 - Nilai _precision_ algoritma _cosine similarity_
 
-  <img width="242" alt="14" src="https://github.com/yudhakr/MLT2/assets/84507343/04cf7352-4c2f-431b-81bb-0cec8e80c8b3">
+ 
+<img width="425" alt="14" src="https://github.com/yudhakr/MLT2/assets/84507343/4a653245-4fdf-47ed-b46e-b0e84388ae41">
+
 
   
 
 Pada model ini, nampak bahwa nilai _precision_ dari model KNN sudah cukup baik dengan skor mencapai 67,7% dan 60% pada sistem rekomendasi yang menggunakan _cosine similarity_. Hal ini memungkinkan rekomendasi kursus online  sesuai dengan kursus online yang telah dibeli/dipelajari oleh pengguna(user).
 
 
+# Referensi
 
+[[1](https://www.sciencedirect.com/science/article/pii/S1877050917328314)] 
+Z. Gulzar, A. A. Leema, en G. Deepak, “PCRS: Personalized Course Recommender System Based on Hybrid Approach”, Procedia Computer Science, vol 125, bll 518–524, 2018. https://doi.org/10.1016/j.procs.2017.12.067
+
+[[2](https://ieeexplore.ieee.org/abstract/document/8596516)] K. Dahdouh, L. Oughdir, A. Dakkak, en A. Ibriz, “Smart Courses Recommender System for Online Learning Platform”, in 2018 IEEE 5th International Congress on Information Science and Technology (CiSt), 2018, bll 328–333. https://doi.org/10.1109/CIST.2018.8596516
+
+[[3](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761)] Harrison, O. (2019, July 14). _Machine Learning Basics with the K-Nearest Neighbors Algorithm_. Medium. https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761
+
+[[4](https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603)] Mallawaarachchi, Vijini. (2020, June 09). Evaluating Clustering Results. https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603
+
+[[5](https://machinelearninginterview.com/topics/machine-learning/evaluation-metrics-for-recommendation-systems/)] MLNerds. (2021, July 23). Evaluation Metrics for Recommendation Systems. https://machinelearninginterview.com/topics/machine-learning/evaluation-metrics-for-recommendation-systems/
 
 
 
