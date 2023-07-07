@@ -78,7 +78,7 @@ dimana :
 | Jenis dan Ukuran Berkas | zip (694 kB)                                                                                     |
 
 
-Gambar di bawah ini merupakan sampel dari dataset pada berkas `udemy_courses.csv`:
+Tabel di bawah ini merupakan sampel dari dataset pada berkas `udemy_courses.csv`:
 
 |   |   | course_id |                                      course_title |                                               url | is_paid | price | num_subscribers | num_reviews | num_lectures |              level | content_duration |  published_timestamp |          subject |
 |---|--:|----------:|--------------------------------------------------:|--------------------------------------------------:|--------:|------:|----------------:|------------:|-------------:|-------------------:|-----------------:|---------------------:|-----------------:|
@@ -91,8 +91,23 @@ Gambar di bawah ini merupakan sampel dari dataset pada berkas `udemy_courses.csv
 
 
 Kemudian informasi type dataset pada berkas
+| #  | Column              | Non-Null Count | Dtype   |
+|----|---------------------|----------------|---------|
+| 0  | course_id           | 3678 non-null  | int64   |
+| 1  | course_title        | 3678 non-null  | object  |
+| 2  | url                 | 3678 non-null  | object  |
+| 3  | is_paid             | 3678 non-null  | bool    |
+| 4  | price               | 3678 non-null  | int64   |
+| 5  | num_subscribers     | 3678 non-null  | int64   |
+| 6  | num_reviews         | 3678 non-null  | int64   |
+| 7  | num_lectures        | 3678 non-null  | int64   |
+| 8  | level               | 3678 non-null  | object  |
+| 9  | content_duration    | 3678 non-null  | float64 |
+| 10 | published_timestamp | 3678 non-null  | object  |
+| 11 | subject             | 3678 non-null  | object  |
 
-<img width="277" alt="2" src="https://github.com/yudhakr/MLT2/assets/84507343/3c13bdbc-f991-42f2-bdff-0ef3875f8785">
+dtypes: bool(1), float64(1), int64(5), object(5)
+memory usage: 319.8+ KB
 
 Berkas udemy_courses.csv berisi informasi lengkap tentang kursus-kursus online yang tersedia di platform Udemy. Dataset ini sangat terorganisir, tidak ada nilai yang kosong, dan mengandung kolom-kolom berikut dengan penjelasan masing-masing:
 
@@ -110,25 +125,27 @@ Berkas udemy_courses.csv berisi informasi lengkap tentang kursus-kursus online y
 1. Kolom subject berisi subjek atau topik yang diajarkan dalam kursus tersebut.
 Dataset ini menyediakan informasi penting tentang setiap kursus online, sehingga dapat digunakan untuk analisis, evaluasi, atau pengembangan sistem rekomendasi dalam konteks pembelajaran online.
 
-Beberapa Visualisasi dari dataset yang digunakan :
-- Visualisasi dengan Data Numerik
+Dibawah ini merupakan  hasil Visualisasi dari dataset yang digunakan :
+
+
+
   <img width="883" alt="visual 1" src="https://github.com/yudhakr/MLT2/assets/84507343/4640a0a5-0c03-4248-85ba-5d671c50337e">
   
-__Gambar 1__ : Merupakan visualisasi Penerapan Distribusi pada kolom price (Harga)
+__Gambar 1__ : Merupakan visualisasi Numerik yang dimana  melakukan Penerapan Distribusi dengan membandingkan count dan price.
   
 <img width="888" alt="visual 2" src="https://github.com/yudhakr/MLT2/assets/84507343/886e49ea-1b87-47ac-9a7f-7546f8814846">
 
-__Gambar 2__ : Merupakan numerik pada kolom  (Jumlah Berlangganan)
+__Gambar 2__ : Merupakan visualisasi numerik pada kolom  yang dimana  melakukan Penerapan num_subscribers (Jumlah Berlangganan) dan count
 
 <img width="842" alt="6" src="https://github.com/yudhakr/MLT2/assets/84507343/60cebdbd-dc7e-4e8d-8d90-51758997ba1c">
 
 __Gambar 3__ : Menjelaskan Distribusi label price dengan label subjek berdasarkan tipe kursus seperti Business Finance,Graphic Design, Musical Instruments, dan Web Development.
 
-- Visualisasi dengan Data Kategori
+
   
 <img width="592" alt="10" src="https://github.com/yudhakr/MLT2/assets/84507343/8e584b8c-9de4-41f4-b095-c6bcf5ef6e6a">
  
-  __Gambar 4__ : Kategori Level Kelas dengan banyaknya juamlah yang berlangganan (Subscribe)
+  __Gambar 4__ : Merupakan visualisasi Kategori Level Kelas dengan menerapkan banyaknya jumlah yang berlangganan (Subscribe).
 
   
 Seperti yang sudah dijelaskan pada bagian _Solution approach_, berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
