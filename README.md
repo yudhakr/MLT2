@@ -4,7 +4,7 @@ Judul Proyek : Sistem Rekomendasi Kursus Online Pada Udemy Courses
 
 ![3](https://github.com/yudhakr/MLT2/assets/84507343/4fd6b452-bf61-43ca-af3a-4513e20c6bcd)
 
-## Project Overview
+## *Project Overview*
   Udemy adalah sebuah platform pembelajaran online yang menyediakan ribuan kursus yang dapat diakses oleh siapa saja. Didirikan pada tahun 2010, Udemy memungkinkan instruktur atau ahli di berbagai bidang untuk membuat dan mengajarkan kursus-kursus mereka kepada para pelajar di seluruh dunia.
 Kursus-kursus di Udemy mencakup beragam topik, termasuk ilmu komputer, bisnis, keuangan, seni dan desain, bahasa, musik, fotografi, pengembangan pribadi, dan banyak lagi.
 
@@ -20,7 +20,7 @@ Kursus-kursus di Udemy mencakup beragam topik, termasuk ilmu komputer, bisnis, k
 Berikut tujuan dari proyek ini:
 - Membuat sistem rekomendasi kursus online untuk pengguna di Udemy.
 - Memberikan rekomendasi untuk kursus online Udemy berdasarkan kriteria yang diinginkan pengguna.
-- Memberikan remoendasi kelas berdasarkan bidang yang diminati.
+
 
 ### Solution Approach
 
