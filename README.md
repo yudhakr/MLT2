@@ -150,6 +150,89 @@ Seperti yang sudah dijelaskan pada bagian _Solution approach_, berikut adalah ta
 
 ## Modeling
 
+Setelah dilakukan pra-pemrosesan data, tahap selanjutnya adalah membuat sistem rekomendasi dengan pendekatan _content-based filtering_.
+
+  1. Menggunakan model K-Nearest Neighbor
+
+     Untuk membangun model klasterisasi ini, digunakan fungsi [NearestNeighbor](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html) dari scikit-learn dengan parameter metriks _euclidean_. Fungsi tersebut kemudian diinisiasikan sebagai model yang selanjutnya dilakukan _fitting_ terhadap data yang ada pada _dataframe_. Kemudian dibuat fungsi `getRecommendedCourses_model` untuk memberikan rekomendasi terhadap suatu judul kursus online dengan skenario, apabila pengguna membeli/berlangganan kursus online tersebut, maka berikan rekomendasi ini sebagai kursus online yang mungkin disukai. Hasil rekomendasinya adalah sebagai berikut:
+ Apabila pengguna menyukai course Sell Practically Anything Professional Design Mockup
+10 course berikut ini juga mungkin akan disukai :
+    
+|   |                                      Judul Kursus | Tingkat Kesamaan |
+|--:|--------------------------------------------------:|-----------------:|
+| 0 | Sell Practically Anything Professional Design ... |           100.0% |
+| 1 |   Learn Photoshop Quickly For Bloggers Web Images |           99.06% |
+| 2 |                                                   |            99.0% |
+| 3 |                                                   |            99.0% |
+| 4 |                                        high swing |            99.0% |
+| 5 |                                                   |            99.0% |
+| 6 |                                                   |            99.0% |
+| 7 |                                                   |            99.0% |
+| 8 |                                                   |            99.0% |
+| 9 |                                                   |            99.0% |
+
+
+  1. Menggunakan _cosine similarity_
+
+     Metode selanjutnya, sistem rekomendasi diberikan dengan cara menghitung nilai _cosine similarity_ dari vektor TF-IDF dari judul kursus pada dataset menggunakan fungsi [cosine_similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html) dari scikit-learn. Implementasinya dengan cara memanggil fungsi `cosine_similarity` dengan argumen _dataframe_ sebagai objeknya. Kemudian hasil dari perhitungannya disimpan pada _dataframe_ baru. Untuk proses pemberian rekomendasi, dibuat fungsi `getRecommendedCourses_cosine` yang akan memberikan rekomendasi terhadap suatu judul kursus online dengan skenario yang sama dengan sebelumnya.
+
+     Proses pada fungsi tersebut ialah, melakukan pencarian kolom dari suatu judul kursus pada _dataframe_ baru hasil perhitungan _cosine similarity_. Lalu diurutkan nilainya berdasarkan nilai _cosine similarity_ tertinggi dan juga urutannya. Setiap urutan ke-2 terakhir hingga ke-n terakhir merupakan kandidat yang memiliki nilai _cosine similarity_ yang sama maka akan ditampilkan rekomendasinya. Urutan paling akhir merupakan nilai _cosine similarity_ dari kolom dengan judul kursus yang sama. Untuk lebih jelasnya, hasil rekomendasi dapat dilihat di bawah ini:
+
+     Apabila pengguna menyukai course Sell Practically Anything Professional Design Mockup
+10 course berikut ini juga mungkin akan disukai :
+
+|   |                    Judul Kursus                   | Cosine Similarity |
+|--:|:-------------------------------------------------:|:-----------------:|
+| 0 | Sell Practically Anything Professional Design ... |          0.289881 |
+| 1 |                            ExpressJS Fundamentals |          0.234338 |
+| 2 |      Bootstrap Tutorial Essentials Basic Advanced |          0.215339 |
+| 3 |                             ABC Adobe Illustrator |          0.212162 |
+| 4 | Complete Guide Successful Freelance Logo Desig... |          0.199011 |
+| 5 |        Create awesome Cinemagraph Adobe Photoshop |          0.188266 |
+| 6 |                            Python Web Programming |          0.184171 |
+| 7 |                Learn Reliably Invest Stock Market |          0.174273 |
+| 8 |      Create Engaging Website Twitter Bootstrap 2x |          0.173791 |
+| 9 |              Short Selling Learn Sell Stocks Fall |          0.172383 |
+    
+
+## Evaluation
+
+Untuk mengukur kinerja sistem rekomendasi dengan model KNN dan _cosine similarity_ digunakan metriks _precision_.
+
+_Precision_ adalah metrik yang dapat digunakan pada kasus klasterisasi untuk menghitung jumlah item rekomendasi yang relevan (_similar_) dengan kategori item yang dipilih. Perhitungan nilai _precision_ dapat menggunakan rumus berikut [[4](https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603)].
+
+$$P = (TP)/(TP + TP) $$
+
+Nilai P Adalah recommender system precision yang mana tingkat ketepatan antara informasi yang diminta oleh pengguna dengan jawaban yang diberikan oleh sistem
+
+Metriks ini memiliki kelebihan untuk berfokus pada bagaimana performa klasterisasi model terhadap data yang relevan _(similar)_, namun kekurangannya metrik ini tidak memperhitungkan data yang kurang relevan. Selain itu, metrik ini juga terbatas pada permasalahan klasterisasi biner [[5](https://machinelearninginterview.com/topics/machine-learning/evaluation-metrics-for-recommendation-systems/)].
+
+Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen berupa kueri input yang nantinya akan dicocokan dengan hasil sistem rekomendasi berdasarkan subjeknya. Berikut adalah hasil implementasinya.
+```python
+# Fungsi untuk menghitung nilai presisi dari sistem rekomendasi
+def precision(query:pd.DataFrame, rec_result:pd.DataFrame):
+  relevant = 0
+  for result in rec_result['subject'].values.tolist():
+    if query['subject'].values == result:
+      relevant += 1
+  return relevant/len(rec_result)
+```
+
+- Nilai _precision_ model KNN
+  
+  <img width="278" alt="15" src="https://github.com/yudhakr/MLT2/assets/84507343/fb7fceb8-1016-4f6c-954c-fd6a0a720506">
+
+
+- Nilai _precision_ algoritma _cosine similarity_
+
+  <img width="242" alt="14" src="https://github.com/yudhakr/MLT2/assets/84507343/04cf7352-4c2f-431b-81bb-0cec8e80c8b3">
+
+  
+
+Pada model ini, nampak bahwa nilai _precision_ dari model KNN sudah cukup baik dengan skor mencapai 67,7% dan 60% pada sistem rekomendasi yang menggunakan _cosine similarity_. Hal ini memungkinkan rekomendasi kursus online  sesuai dengan kursus online yang telah dibeli/dipelajari oleh pengguna(user).
+
+
+
 
 
 
