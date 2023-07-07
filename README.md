@@ -167,7 +167,7 @@ Seperti yang sudah dijelaskan pada bagian _Solution approach_, berikut adalah ta
 
 ## Modeling
 
-Setelah dilakukan pra-pemrosesan data, tahap selanjutnya adalah membuat sistem rekomendasi dengan pendekatan _content-based filtering_.
+Setelah dilakukan pra-pemrosesan data, tahap selanjutnya adalah membuat sistem rekomendasi dengan melakukan pemrosesan. Untuk tahap ini menggunakan 2 algoritma K-Nearest Neighbor dan cosine similarity.
 
   1. Menggunakan model K-Nearest Neighbor
 
@@ -220,32 +220,22 @@ _Precision_ adalah metrik yang dapat digunakan pada kasus klasterisasi untuk men
 
 $$P = (TP)/(TP + TP) $$
 
-Nilai P Adalah recommender system precision yang mana tingkat ketepatan antara informasi yang diminta oleh pengguna dengan jawaban yang diberikan oleh sistem
+Nilai P Adalah recommender system precision yang mana tingkat ketepatan antara informasi yang diminta oleh pengguna dengan jawaban yang diberikan oleh sistem.
 
-Metriks ini memiliki kelebihan untuk berfokus pada bagaimana performa klasterisasi model terhadap data yang relevan _(similar)_, namun kekurangannya metrik ini tidak memperhitungkan data yang kurang relevan. Selain itu, metrik ini juga terbatas pada permasalahan klasterisasi biner [[5](https://machinelearninginterview.com/topics/machine-learning/evaluation-metrics-for-recommendation-systems/)].
+ Untuk metriks ini memiliki kelebihan untuk berfokus pada bagaimana performa klasterisasi model terhadap data yang relevan _(similar)_, namun kekurangannya metrik ini tidak memperhitungkan data yang kurang relevan. Selain itu, metrik ini juga terbatas pada permasalahan klasterisasi biner [[5](https://machinelearninginterview.com/topics/machine-learning/evaluation-metrics-for-recommendation-systems/)].
 
 Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen berupa kueri input yang nantinya akan dicocokan dengan hasil sistem rekomendasi berdasarkan subjeknya. Berikut adalah hasil implementasinya.
-```python
-# Fungsi untuk menghitung nilai presisi dari sistem rekomendasi
-def precision(query:pd.DataFrame, rec_result:pd.DataFrame):
-  relevant = 0
-  for result in rec_result['subject'].values.tolist():
-    if query['subject'].values == result:
-      relevant += 1
-  return relevant/len(rec_result)
-```
 
-- Nilai _precision_ model KNN
-  
+
+- Nilai Skor precision menggunakan K-Nearest Neighbor adalah 67.74193548387096%
  
-<img width="432" alt="15" src="https://github.com/yudhakr/MLT2/assets/84507343/ff09d45c-b4dd-40ba-83c4-a7c58ce37123">
 
 
 
-- Nilai _precision_ algoritma _cosine similarity_
 
+- Nilai Skor precision menggunakan Cosine Similarity adalah 60.0%
  
-<img width="425" alt="14" src="https://github.com/yudhakr/MLT2/assets/84507343/4a653245-4fdf-47ed-b46e-b0e84388ae41">
+
 
 
   
@@ -264,7 +254,7 @@ Z. Gulzar, A. A. Leema, en G. Deepak, “PCRS: Personalized Course Recommender S
 
 [[4](https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603)] Mallawaarachchi, Vijini. (2020, June 09). Evaluating Clustering Results. https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603
 
-[[5](https://machinelearninginterview.com/topics/machine-learning/evaluation-metrics-for-recommendation-systems/)] MLNerds. (2021, July 23). Evaluation Metrics for Recommendation Systems. https://machinelearninginterview.com/topics/machine-learning/evaluation-metrics-for-recommendation-systems/
+[[5](https://rey1024.medium.com/mengenal-accuracy-precission-recall-dan-specificity-serta-yang-diprioritaskan-b79ff4d77de8)] Salma Ghoneim."Accuracy, Recall, Precision, F-Score & Specificity." https://towardsdatascience.com/accuracy-recall-precision-f-score-specificity-which-to-optimize-on-867d3f11124
 
 
 
