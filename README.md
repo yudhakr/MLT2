@@ -218,9 +218,12 @@ Untuk mengukur kinerja sistem rekomendasi dengan model KNN dan _cosine similarit
 
 *_Precision_ adalah metrik yang dapat digunakan pada kasus klasterisasi untuk menghitung jumlah item rekomendasi yang relevan (_similar_) dengan kategori item yang dipilih. Perhitungan nilai _precision_ dapat menggunakan rumus berikut [[4](https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603)].
 
-$$P = (TP)/(TP + TP) $$
+$$P = (op)/( tpo) $$
 
-Nilai P Adalah recommender system precision yang mana tingkat ketepatan antara informasi yang diminta oleh pengguna dengan jawaban yang diberikan oleh sistem.
+ - Nilai P adalah recommender system precision yang mana tingkat ketepatan antara informasi yang diminta oleh pengguna dengan jawaban yang diberikan oleh sistem.
+- Nilai op adalah rekomendasi kami yang relevan
+- Nilai tpo adalah nilai item yang kami rekomendasikan
+
 
 Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri. [[5](https://machinelearninginterview.com/topics/machine-learning/evaluation-metrics-for-recommendation-systems/)].
 
