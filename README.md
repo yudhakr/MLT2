@@ -216,13 +216,13 @@ Setelah dilakukan pra-pemrosesan data, tahap selanjutnya adalah membuat sistem r
 
 Untuk mengukur kinerja sistem rekomendasi dengan model KNN dan _cosine similarity_ digunakan metriks _precision_.
 
-_Precision_ adalah metrik yang dapat digunakan pada kasus klasterisasi untuk menghitung jumlah item rekomendasi yang relevan (_similar_) dengan kategori item yang dipilih. Perhitungan nilai _precision_ dapat menggunakan rumus berikut [[4](https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603)].
+*_Precision_ adalah metrik yang dapat digunakan pada kasus klasterisasi untuk menghitung jumlah item rekomendasi yang relevan (_similar_) dengan kategori item yang dipilih. Perhitungan nilai _precision_ dapat menggunakan rumus berikut [[4](https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603)].
 
 $$P = (TP)/(TP + TP) $$
 
 Nilai P Adalah recommender system precision yang mana tingkat ketepatan antara informasi yang diminta oleh pengguna dengan jawaban yang diberikan oleh sistem.
 
- Untuk metriks ini memiliki kelebihan untuk berfokus pada bagaimana performa klasterisasi model terhadap data yang relevan _(similar)_, namun kekurangannya metrik ini tidak memperhitungkan data yang kurang relevan. Selain itu, metrik ini juga terbatas pada permasalahan klasterisasi biner [[5](https://machinelearninginterview.com/topics/machine-learning/evaluation-metrics-for-recommendation-systems/)].
+Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri. [[5](https://machinelearninginterview.com/topics/machine-learning/evaluation-metrics-for-recommendation-systems/)].
 
 Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen berupa kueri input yang nantinya akan dicocokan dengan hasil sistem rekomendasi berdasarkan subjeknya. Berikut adalah hasil implementasinya.
 
