@@ -1,25 +1,25 @@
 # Laporan Machine Learning Terapan - Ayudha Kusuma R.
 ## Submission MLT2 -Dicoding
-Judul Proyek : Sistem Rekomendasi Kursus Online Pada Udemy Courses
+Judul Proyek : Sistem Rekomendasi Kursus *Online* Pada Udemy Courses
 
 ![3](https://github.com/yudhakr/MLT2/assets/84507343/4fd6b452-bf61-43ca-af3a-4513e20c6bcd)
 
 ## *Project Overview*
-  Udemy adalah sebuah platform pembelajaran online yang menyediakan ribuan kursus yang dapat diakses oleh siapa saja. Didirikan pada tahun 2010, Udemy memungkinkan instruktur atau ahli di berbagai bidang untuk membuat dan mengajarkan kursus-kursus mereka kepada para pelajar di seluruh dunia.
+  Udemy adalah sebuah platform pembelajaran *Online* yang menyediakan ribuan kursus yang dapat diakses oleh siapa saja. Didirikan pada tahun 2010, Udemy memungkinkan instruktur atau ahli di berbagai bidang untuk membuat dan mengajarkan kursus-kursus mereka kepada para pelajar di seluruh dunia.
 Kursus-kursus di Udemy mencakup beragam topik, termasuk ilmu komputer, bisnis, keuangan, seni dan desain, bahasa, musik, fotografi, pengembangan pribadi, dan banyak lagi.
 
-  Pada Proyek ini membuat Sistem Rekomendasi Kursus Online Pada Udemy Courses, dimana banyak sekali pengguna maupun user yang mencari kelas tertentu dengan kireteria tertentu.Banyak pengguna yang baru memasuki bidang tertentu memilih untuk belajar melalui kursus online. Namun, dengan banyaknya pilihan kursus yang tersedia, sering kali mereka merasa kebingungan dalam memilih kursus selanjutnya. Untuk mengatasi hal ini, diperlukan adanya sebuah sistem rekomendasi yang dapat membantu pengguna baru menemukan kursus online yang sesuai dengan minat dan kebutuhan mereka. Sistem rekomendasi ini tidak hanya berfungsi sebagai sarana periklanan, tetapi juga dapat meningkatkan popularitas kursus online yang baru atau kurang terkenal, karena sebelumnya sulit untuk ditemukan. Dengan adanya sistem rekomendasi, pengguna dapat dengan mudah menemukan kursus yang mereka harapkan dan memperluas pengetahuan mereka dalam bidang yang diminati. [1]
+  Pada Proyek ini membuat Sistem Rekomendasi Kursus *Online* Pada Udemy Courses, dimana banyak sekali pengguna maupun user yang mencari kelas tertentu dengan kireteria tertentu.Banyak pengguna yang baru memasuki bidang tertentu memilih untuk belajar melalui kursus *Online*. Namun, dengan banyaknya pilihan kursus yang tersedia, sering kali mereka merasa kebingungan dalam memilih kursus selanjutnya. Untuk mengatasi hal ini, diperlukan adanya sebuah sistem rekomendasi yang dapat membantu pengguna baru menemukan kursus *Online* yang sesuai dengan minat dan kebutuhan mereka. Sistem rekomendasi ini tidak hanya berfungsi sebagai sarana periklanan, tetapi juga dapat meningkatkan popularitas kursus *Online* yang baru atau kurang terkenal, karena sebelumnya sulit untuk ditemukan. Dengan adanya sistem rekomendasi, pengguna dapat dengan mudah menemukan kursus yang mereka harapkan dan memperluas pengetahuan mereka dalam bidang yang diminati. [1]
 
 ## Business Understanding
 ### Problem Statements
  Berdasarkan masalah diatas maka dapat ditarik suatu rumusan masalah yaitu:
  - Sistem rekomendasi apa yang cocok dalam penerapan kasus proyek ini ?
- - Bagaimana cara membuat sistem rekomendasi kursus online pada Udemy Courses
+ - Bagaimana cara membuat sistem rekomendasi kursus *Online* pada Udemy Courses
    
 ### Goals
 Berikut tujuan dari proyek ini:
-- Membuat sistem rekomendasi kursus online untuk pengguna di Udemy.
-- Memberikan rekomendasi untuk kursus online Udemy berdasarkan kriteria yang diinginkan pengguna.
+- Membuat sistem rekomendasi kursus *Online* untuk pengguna di Udemy.
+- Memberikan rekomendasi untuk kursus *Online* Udemy berdasarkan kriteria yang diinginkan pengguna.
 
 
 ### Solution Approach
@@ -34,7 +34,7 @@ Solusi yang dapat dilakukan untuk mencapai tujuan proyek ini diantaranya:
 
 - Untuk persiapan data (sebelum dimasukkan ke model) dilakukan Vektorisasi menggunakan _TF-IDF Vectorizer_ untuk ekstraksi fitur pada teks judul kursus.
 
-- Pembuatan sistem rekomendasi dilakukan dengan pendekatan _content-based filtering_ berdasarkan dataset yang ada. Sehingga sistem rekomendasi dibuat untuk memberikan rekomendasi pada pengguna terhadap kursus online yang sebelumnya diikuti/dibeli. Beberapa algoritma yang digunakan untuk membuat sistem rekomendasi di proyek ini diantaranya:
+- Pembuatan sistem rekomendasi dilakukan dengan pendekatan _content-based filtering_ berdasarkan dataset yang ada. Sehingga sistem rekomendasi dibuat untuk memberikan rekomendasi pada pengguna terhadap kursus *Online* yang sebelumnya diikuti/dibeli. Beberapa algoritma yang digunakan untuk membuat sistem rekomendasi di proyek ini diantaranya:
   - Sistem rekomendasi berbasis model, yakni dengan algoritma K-Nearest Neighbor. Algoritma tersebut dipilih karena lebih mudah diaplikasikan dan cukup sesuai untuk kasus klasterisasi di sistem rekomendasi. Algoritma ini berasumsi bahwa suatu data yang serupa memiliki kedekatan. Cara kerja dari algoritma ini adalah sebagai berikut (diterjemahkan dari [[3](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761)]):
     - Muat datanya.
     - Inisialisasi nilai K (banyak tetangga/kelompok).
@@ -131,21 +131,21 @@ Dibawah ini merupakan  hasil Visualisasi dari dataset yang digunakan :
 
   <img width="883" alt="visual 1" src="https://github.com/yudhakr/MLT2/assets/84507343/4640a0a5-0c03-4248-85ba-5d671c50337e">
   
-__Gambar 1__ : Merupakan visualisasi Numerik yang dimana  melakukan Penerapan Distribusi dengan membandingkan count dan price.
+__Gambar 1__ : Visualisasi Numerik yang dimana  melakukan Penerapan Distribusi dengan membandingkan count dan price.
   
 <img width="888" alt="visual 2" src="https://github.com/yudhakr/MLT2/assets/84507343/886e49ea-1b87-47ac-9a7f-7546f8814846">
 
-__Gambar 2__ : Merupakan visualisasi numerik pada kolom  yang dimana  melakukan Penerapan num_subscribers (Jumlah Berlangganan) dan count
+__Gambar 2__ : Visualisasi numerik pada kolom  yang dimana  melakukan Penerapan num_subscribers (Jumlah Berlangganan) dan count
 
 <img width="842" alt="6" src="https://github.com/yudhakr/MLT2/assets/84507343/60cebdbd-dc7e-4e8d-8d90-51758997ba1c">
 
-__Gambar 3__ : Menjelaskan Distribusi label price dengan label subjek berdasarkan tipe kursus seperti Business Finance,Graphic Design, Musical Instruments, dan Web Development.
+__Gambar 3__ :  Distribusi label price dengan label subjek berdasarkan tipe kursus seperti Business Finance,Graphic Design, Musical Instruments, dan Web Development.
 
 
   
 <img width="592" alt="10" src="https://github.com/yudhakr/MLT2/assets/84507343/8e584b8c-9de4-41f4-b095-c6bcf5ef6e6a">
  
-  __Gambar 4__ : Merupakan visualisasi Kategori Level Kelas dengan menerapkan banyaknya jumlah yang berlangganan (Subscribe).
+  __Gambar 4__ : Visualisasi Kategori Level Kelas dengan menerapkan banyaknya jumlah yang berlangganan (Subscribe).
 
   
 Seperti yang sudah dijelaskan pada bagian _Solution approach_, berikut adalah tahapan-tahapan dalam melakukan pra-pemrosesan data:
