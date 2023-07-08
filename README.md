@@ -224,6 +224,7 @@ $$P = (op)/( tpo) $$
 - Nilai tpo adalah nilai item yang  rekomendasikan
 
 **Bagaimana Cara penerapannya ?**
+
 Cara kerjanya adalah dengan membagi nilai item yang relevan dengan nilai jumlah item yang direkomendasikan, misalnya berikut
  |   |                                  Judul Kursus | Tingkat Kesamaan |
 |--:|----------------------------------------------:|-----------------:|
@@ -254,11 +255,8 @@ Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen
  
 
 
-
-  
-
-Pada model ini, nampak bahwa nilai _precision_ dari model KNN sudah cukup baik dengan skor mencapai 70.0% dan 67.7% pada sistem rekomendasi yang menggunakan _cosine similarity_. Hal ini memungkinkan rekomendasi kursus online  sesuai dengan kursus online yang telah dibeli/dipelajari oleh pengguna(user).
-
+# Kesimpulan
+Dapat disumpulkan model ini, nampak bahwa nilai _precision_ dari model KNN sudah cukup baik dengan skor mencapai 70.0% dan 67.7% pada sistem rekomendasi yang menggunakan _cosine similarity_,masih ada beberapa kekurangan dari model yang dibuat seperti yang terlihat pada skor Precision. Untuk memperbaikinya dapat digunakan algoritma untuk membuat model rekomendasi yang lain seperti menggunakan deep learning lalu dibandingkan performanya dengan model KNN saat ini.
 
 # Referensi
 
