@@ -226,18 +226,18 @@ $$P = (op)/( tpo) $$
 
 **Bagaimana Cara penerapannya ?**
 Cara kerjanya adalah dengan membagi nilai item yang relevan dengan nilai jumlah item yang direkomendasikan, misalnya berikut
-|   |   |                                  Judul Kursus | Tingkat Kesamaan |
-|---|--:|----------------------------------------------:|-----------------:|
-|   | 0 |                      Succeed Forex Know Start |           100.0% |
-|   | 1 |                      Double Entry Bookkeeping |           99.46% |
-|   | 2 | Public Speaking Great Financial Presentations |           99.44% |
-|   | 3 |       Financial Analysis Scratch Professional |           99.38% |
-|   | 4 |                      Succeed Bonds Know Start |           99.32% |
-|   | 5 |                      Succeed Lotto Know Start |           99.27% |
-|   | 6 |                                               |            99.0% |
-|   | 7 |                                               |            99.0% |
-|   | 8 |                                               |            99.0% |
-|   | 9 |                                               |            99.0% |
+ |   |                                  Judul Kursus | Tingkat Kesamaan |
+|--:|----------------------------------------------:|-----------------:|
+| 0 |                      Succeed Forex Know Start |           100.0% |
+ | 1 |                      Double Entry Bookkeeping |           99.46% |
+ | 2 | Public Speaking Great Financial Presentations |           99.44% |
+ | 3 |       Financial Analysis Scratch Professional |           99.38% |
+ | 4 |                      Succeed Bonds Know Start |           99.32% |
+ | 5 |                      Succeed Lotto Know Start |           99.27% |
+ | 6 |                                               |            99.0% |
+ | 7 |                                               |            99.0% |
+ | 8 |                                               |            99.0% |
+ | 9 |                                               |            99.0% |
 
 Fitur yang relevan pada tabel diatas adalah 10 dengan jumlah total top-N adalah 10, apabila dimasukkan kedalam rumus maka akan menjadi seperti berikut : releven/jumlah item rekomendasi = 10/10 = 1 berarti precisionnya adalah 100%
 
