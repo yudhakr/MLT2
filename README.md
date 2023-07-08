@@ -175,19 +175,18 @@ Setelah dilakukan pra-pemrosesan data, tahap selanjutnya adalah membuat sistem r
  Apabila pengguna menyukai course Sell Practically Anything Professional Design Mockup
 10 course berikut ini juga mungkin akan disukai :
     
-|   |                                      Judul Kursus | Tingkat Kesamaan |
-|--:|--------------------------------------------------:|-----------------:|
-| 0 | Sell Practically Anything Professional Design ... |           100.0% |
-| 1 |   Learn Photoshop Quickly For Bloggers Web Images |           99.06% |
-| 2 |                                                   |            99.0% |
-| 3 |                                                   |            99.0% |
-| 4 |                                        high swing |            99.0% |
-| 5 |                                                   |            99.0% |
-| 6 |                                                   |            99.0% |
-| 7 |                                                   |            99.0% |
-| 8 |                                                   |            99.0% |
-| 9 |                                                   |            99.0% |
-
+|   |                                  Judul Kursus | Tingkat Kesamaan |
+|--:|----------------------------------------------:|-----------------:|
+| 0 |                      Succeed Forex Know Start |           100.0% |
+| 1 |                      Double Entry Bookkeeping |           99.46% |
+| 2 | Public Speaking Great Financial Presentations |           99.44% |
+| 3 |       Financial Analysis Scratch Professional |           99.38% |
+| 4 |                      Succeed Bonds Know Start |           99.32% |
+| 5 |                      Succeed Lotto Know Start |           99.27% |
+| 6 |                                               |            99.0% |
+| 7 |                                               |            99.0% |
+| 8 |                                               |            99.0% |
+| 9 |                                               |            99.0% |
 
   1. Menggunakan _cosine similarity_
 
@@ -198,18 +197,18 @@ Setelah dilakukan pra-pemrosesan data, tahap selanjutnya adalah membuat sistem r
      Apabila pengguna menyukai course Sell Practically Anything Professional Design Mockup
 10 course berikut ini juga mungkin akan disukai :
 
-|   |                    Judul Kursus                   | Cosine Similarity |
-|--:|:-------------------------------------------------:|:-----------------:|
-| 0 | Sell Practically Anything Professional Design ... |          0.289881 |
-| 1 |                            ExpressJS Fundamentals |          0.234338 |
-| 2 |      Bootstrap Tutorial Essentials Basic Advanced |          0.215339 |
-| 3 |                             ABC Adobe Illustrator |          0.212162 |
-| 4 | Complete Guide Successful Freelance Logo Desig... |          0.199011 |
-| 5 |        Create awesome Cinemagraph Adobe Photoshop |          0.188266 |
-| 6 |                            Python Web Programming |          0.184171 |
-| 7 |                Learn Reliably Invest Stock Market |          0.174273 |
-| 8 |      Create Engaging Website Twitter Bootstrap 2x |          0.173791 |
-| 9 |              Short Selling Learn Sell Stocks Fall |          0.172383 |
+|   |                  Judul Kursus                 | Cosine Similarity |
+|--:|:---------------------------------------------:|:-----------------:|
+| 0 |                      Double Entry Bookkeeping |          0.854579 |
+| 1 | Public Speaking Great Financial Presentations |          0.841856 |
+| 2 |       Financial Analysis Scratch Professional |          0.806692 |
+| 3 |                      Succeed Bonds Know Start |          0.768706 |
+| 4 |                      Succeed Lotto Know Start |          0.732243 |
+| 5 | Blues Master Advanced Techniques Piano Course |          0.460829 |
+| 6 |          Simple things know start FOREX OFFER |          0.454957 |
+| 7 |                                   Know Trader |          0.364812 |
+| 8 |                            Piano Skills TODAY |          0.284592 |
+| 9 |                   Learn jQuery Example Course |          0.275319 |
     
 
 ## Evaluation
@@ -239,26 +238,26 @@ Cara kerjanya adalah dengan membagi nilai item yang relevan dengan nilai jumlah 
  | 8 |                                               |            99.0% |
  | 9 |                                               |            99.0% |
 
-Fitur yang relevan pada tabel diatas adalah 10 dengan jumlah total top-N adalah 10, apabila dimasukkan kedalam rumus maka akan menjadi seperti berikut : releven/jumlah item rekomendasi = 10/10 = 1 berarti precisionnya adalah 100%
+Fitur yang relevan pada tabel diatas adalah 10 dengan jumlah total top-N adalah 10, apabila dimasukkan kedalam rumus maka akan menjadi seperti berikut : releven/jumlah item rekomendasi = 10/10 = 1 berarti precisionnya adalah 100%.
 
 Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri.
 Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen berupa kueri input yang nantinya akan dicocokan dengan hasil sistem rekomendasi berdasarkan subjeknya. Berikut adalah hasil implementasinya.
 
 
-- Nilai Skor precision menggunakan K-Nearest Neighbor adalah 67.74193548387096%
+- Nilai Skor precision menggunakan K-Nearest Neighbor adalah 67.74193548387096%.
  
 
 
 
 
-- Nilai Skor precision menggunakan Cosine Similarity adalah 60.0%
+- Nilai Skor precision menggunakan Cosine Similarity adalah 70.0%.
  
 
 
 
   
 
-Pada model ini, nampak bahwa nilai _precision_ dari model KNN sudah cukup baik dengan skor mencapai 67,7% dan 60% pada sistem rekomendasi yang menggunakan _cosine similarity_. Hal ini memungkinkan rekomendasi kursus online  sesuai dengan kursus online yang telah dibeli/dipelajari oleh pengguna(user).
+Pada model ini, nampak bahwa nilai _precision_ dari model KNN sudah cukup baik dengan skor mencapai 70.0% dan 67.7% pada sistem rekomendasi yang menggunakan _cosine similarity_. Hal ini memungkinkan rekomendasi kursus online  sesuai dengan kursus online yang telah dibeli/dipelajari oleh pengguna(user).
 
 
 # Referensi
