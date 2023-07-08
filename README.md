@@ -221,12 +221,27 @@ Untuk mengukur kinerja sistem rekomendasi dengan model KNN dan _cosine similarit
 $$P = (op)/( tpo) $$
 
  - Nilai P adalah recommender system precision yang mana tingkat ketepatan antara informasi yang diminta oleh pengguna dengan jawaban yang diberikan oleh sistem.
-- Nilai op adalah rekomendasi kami yang relevan
-- Nilai tpo adalah nilai item yang kami rekomendasikan
+- Nilai op adalah rekomendasi yang relevan
+- Nilai tpo adalah nilai item yang  rekomendasikan
 
+**Bagaimana Cara penerapannya ?**
+Cara kerjanya adalah dengan membagi nilai item yang relevan dengan nilai jumlah item yang direkomendasikan, misalnya berikut
+|   |   |                                  Judul Kursus | Tingkat Kesamaan |
+|---|--:|----------------------------------------------:|-----------------:|
+|   | 0 |                      Succeed Forex Know Start |           100.0% |
+|   | 1 |                      Double Entry Bookkeeping |           99.46% |
+|   | 2 | Public Speaking Great Financial Presentations |           99.44% |
+|   | 3 |       Financial Analysis Scratch Professional |           99.38% |
+|   | 4 |                      Succeed Bonds Know Start |           99.32% |
+|   | 5 |                      Succeed Lotto Know Start |           99.27% |
+|   | 6 |                                               |            99.0% |
+|   | 7 |                                               |            99.0% |
+|   | 8 |                                               |            99.0% |
+|   | 9 |                                               |            99.0% |
 
-Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri. [[5](https://machinelearninginterview.com/topics/machine-learning/evaluation-metrics-for-recommendation-systems/)].
+Fitur yang relevan pada tabel diatas adalah 10 dengan jumlah total top-N adalah 10, apabila dimasukkan kedalam rumus maka akan menjadi seperti berikut : releven/jumlah item rekomendasi = 10/10 = 1 berarti precisionnya adalah 100%
 
+Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri.
 Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen berupa kueri input yang nantinya akan dicocokan dengan hasil sistem rekomendasi berdasarkan subjeknya. Berikut adalah hasil implementasinya.
 
 
@@ -257,7 +272,7 @@ Z. Gulzar, A. A. Leema, en G. Deepak, “PCRS: Personalized Course Recommender S
 
 [[4](https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603)] Mallawaarachchi, Vijini. (2020, June 09). Evaluating Clustering Results. https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603
 
-[[5](https://rey1024.medium.com/mengenal-accuracy-precission-recall-dan-specificity-serta-yang-diprioritaskan-b79ff4d77de8)] Salma Ghoneim."Accuracy, Recall, Precision, F-Score & Specificity." https://towardsdatascience.com/accuracy-recall-precision-f-score-specificity-which-to-optimize-on-867d3f11124
+
 
 
 
