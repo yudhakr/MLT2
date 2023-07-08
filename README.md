@@ -209,6 +209,8 @@ Setelah dilakukan pra-pemrosesan data, tahap selanjutnya adalah membuat sistem r
 | 7 |                                   Know Trader |          0.364812 |
 | 8 |                            Piano Skills TODAY |          0.284592 |
 | 9 |                   Learn jQuery Example Course |          0.275319 |
+
+
     
 
 ## Evaluation
@@ -226,19 +228,25 @@ $$P = (op)/( tpo) $$
 **Bagaimana Cara penerapannya ?**
 
 Cara kerjanya adalah dengan membagi nilai item yang relevan dengan nilai jumlah item yang direkomendasikan.
-Fitur yang relevan pada  adalah 10 dengan jumlah total top-N adalah 10, apabila dimasukkan kedalam rumus maka akan menjadi seperti berikut : releven/jumlah item rekomendasi = 10/10 = 1 berarti precisionnya adalah 100%.
+Fitur yang relevan pada  adalah 10 dengan jumlah total top-N adalah 10, apabila dimasukkan kedalam rumus maka akan menjadi seperti berikut : releven/jumlah item rekomendasi = 10/10 = 1 berarti precisionnya adalah 100%. 
 
 Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri.
+
+Untuk quary input mengabilan data nomor ke 500.
+|     |       course_title       |      subject     |
+|----:|:------------------------:|:----------------:|
+| 500 | Succeed Forex Know Start | Business Finance |
+
 Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen berupa kueri input yang nantinya akan dicocokan dengan hasil sistem rekomendasi berdasarkan subjeknya. Berikut adalah hasil implementasinya.
 
 
-- Nilai Skor precision menggunakan K-Nearest Neighbor adalah 67.74193548387096%.
+- Nilai Skor precision menggunakan K-Nearest Neighbor adalah 67.74193548387096%.Nilai ini didapatkan dari quary_input dan knn_result dikalikan 100%.
+
+
+
+
+- Nilai Skor precision menggunakan Cosine Similarity adalah 70.0%.Nilai ini didapatkan dari quary_input dan cosine_result dikalikan 100%.
  
-
-
-
-
-- Nilai Skor precision menggunakan Cosine Similarity adalah 70.0%.
  
 
 
