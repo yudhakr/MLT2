@@ -232,7 +232,7 @@ Fitur yang relevan pada  adalah 10 dengan jumlah total top-N adalah 10, apabila 
 
 Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri.
 
-Untuk quary input mengabilan data nomor ke 500.
+Untuk quary input mengambil data nomor ke 500.
 |     |       course_title       |      subject     |
 |----:|:------------------------:|:----------------:|
 | 500 | Succeed Forex Know Start | Business Finance |
