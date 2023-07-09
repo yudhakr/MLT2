@@ -244,56 +244,12 @@ Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen
 
 
 Hasil dari knn_result yang berasal dari course_title dan subject
-|      |                  course_title                 |       subject       |
-|-----:|:---------------------------------------------:|:-------------------:|
-|  214 |                      Succeed Bonds Know Start |    Business Finance |
-|  216 |                      Succeed Lotto Know Start |    Business Finance |
-|  280 |                                               |    Business Finance |
-|  283 |                                               |    Business Finance |
-|  500 |                      Succeed Forex Know Start |    Business Finance |
-|  672 |                                               |    Business Finance |
-|  674 |                                               |    Business Finance |
-|  678 |                                               |    Business Finance |
-|  811 |                      Double Entry Bookkeeping |    Business Finance |
-|  875 |                                               |    Business Finance |
-|  908 |                                               |    Business Finance |
-|  914 |                                               |    Business Finance |
-|  919 |                                               |    Business Finance |
-|  949 | Public Speaking Great Financial Presentations |    Business Finance |
-| 1032 |                                               |    Business Finance |
-| 1048 |                                               |    Business Finance |
-| 1051 |                                               |    Business Finance |
-| 1109 |                                               |    Business Finance |
-| 1110 |                                               |    Business Finance |
-| 1113 |       Financial Analysis Scratch Professional |    Business Finance |
-| 1175 |                                               |    Business Finance |
-| 1209 |                                               |      Graphic Design |
-| 1324 |                                               |      Graphic Design |
-| 1352 |                                               |      Graphic Design |
-| 1480 |                                               |      Graphic Design |
-| 1598 |                                               |      Graphic Design |
-| 1670 |                                               |      Graphic Design |
-| 1978 |                                               | Musical Instruments |
-| 2209 |                                               | Musical Instruments |
-| 2255 |                                               | Musical Instruments |
-| 2475 |                                               | Musical Instruments |
 
 - Nilai Skor precision menggunakan K-Nearest Neighbor adalah 67.7%.Nilai ini didapatkan dari quary_input dan knn_result dikalikan 100%.
 
   
 Hasil dari cosine result yang berasal dari course_title dan subject
-|      |                  course_title                 |       subject       |
-|-----:|:---------------------------------------------:|:-------------------:|
-|  214 |                      Succeed Bonds Know Start |    Business Finance |
-|  216 |                      Succeed Lotto Know Start |    Business Finance |
-|  394 |          Simple things know start FOREX OFFER |    Business Finance |
-|  485 |                                   Know Trader |    Business Finance |
-|  811 |                      Double Entry Bookkeeping |    Business Finance |
-|  949 | Public Speaking Great Financial Presentations |    Business Finance |
-| 1113 |       Financial Analysis Scratch Professional |    Business Finance |
-| 2090 | Blues Master Advanced Techniques Piano Course | Musical Instruments |
-| 2163 |                            Piano Skills TODAY | Musical Instruments |
-| 3074 |                   Learn jQuery Example Course |     Web Development |
+
 
 
 
