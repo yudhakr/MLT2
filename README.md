@@ -227,8 +227,8 @@ $$P = (op)/( tpo) $$
 
 **Bagaimana Cara penerapannya ?**
 
-Cara kerjanya adalah dengan membagi nilai item yang relevan dengan nilai jumlah item yang direkomendasikan.
-Fitur yang relevan pada  adalah 10 dengan jumlah total top-N adalah 10, apabila dimasukkan kedalam rumus maka akan menjadi seperti berikut : releven/jumlah item rekomendasi = 10/10 = 1 yang berarti precisionnya 1 = 100.
+Cara kerjanya adalah dengan membagi nilai item yang relevan dengan nilai jumlah item yang 
+Fitur yang relevan pada  adalah 10 dengan jumlah total top-N adalah 10, apabila dimasukkan kedalam rumus maka akan menjadi seperti berikut : releven/jumlah item rekomendasi = 10/10 = 1 yang berarti precisionnya adalah 100%, dimana precision 1 = 100.
 
 Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri.
 
@@ -238,7 +238,9 @@ Untuk quary input mengambil data nomor ke 500.
 | 500 | Succeed Forex Know Start | Business Finance |
 
 
-Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen berupa kueri input yang nantinya akan dicocokan dengan hasil sistem rekomendasi berdasarkan subjeknya. Berikut adalah hasil implementasinya.
+Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen berupa kueri input yang nantinya akan dicocokan dengan hasil sistem rekomendasi berdasarkan subjeknya. Berikut adalah hasil implementasinya dengan menggunakan rumus :
+  __Presisi = TP/(FP+TP) * 100%__
+
 
 Hasil dari knn_result yang berasal dari course_title dan subject
 |      |                  course_title                 |       subject       |
