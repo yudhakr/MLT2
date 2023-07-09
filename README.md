@@ -219,7 +219,7 @@ Untuk mengukur kinerja sistem rekomendasi dengan model KNN dan _cosine similarit
 
 *_Precision_ adalah metrik yang dapat digunakan pada kasus klasterisasi untuk menghitung jumlah item rekomendasi yang relevan (_similar_) dengan kategori item yang dipilih. Perhitungan nilai _precision_ dapat menggunakan rumus berikut [[4](https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603)].
 
-__P = (op)/( tpo) * 100%__
+__P = (op)/( tpo)* 100%__
  
 
  - Nilai P adalah recommender system precision yang mana tingkat ketepatan antara informasi yang diminta oleh pengguna dengan jawaban yang diberikan oleh sistem.
@@ -243,24 +243,47 @@ Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen
  
 
 
-Hasil dari knn_result yang berasal dari course_title dan subject
+Hasil dari knn_result yang berasal dari course_title dan subject yang mana dipilihlah 10 course secara rendom.
 
-- Nilai Skor precision menggunakan K-Nearest Neighbor adalah 67.7%.Nilai ini didapatkan dari quary_input dan knn_result dikalikan 100%.
+|     |       course_title       |      subject     |
+|----:|:------------------------:|:----------------:|
+| 214 | Succeed Bonds Know Start | Business Finance |
+| 216 | Succeed Lotto Know Start | Business Finance |
+| 280 |                          | Business Finance |
+| 283 |                          | Business Finance |
+| 500 | Succeed Forex Know Start | Business Finance |
+| 672 |                          | Business Finance |
+| 674 |                          | Business Finance |
+| 678 |                          | Business Finance |
+| 811 | Double Entry Bookkeeping | Business Finance |
+| 875 |                          | Business Finance |
+
+- Nilai Skor precision menggunakan K-Nearest Neighbor adalah 100%.Nilai ini didapatkan dari quary_input dan knn_result dikalikan 100%.Dimana nilai adalah (10/10)*100% didapatkan 100%
 
   
-Hasil dari cosine result yang berasal dari course_title dan subject
+Hasil dari cosine result yang berasal dari course_title dan subject yang mana sama dengan knn_result diambilkan 10 course secara rendom.
+|      |                  course_title                 |       subject       |
+|-----:|:---------------------------------------------:|:-------------------:|
+|  214 |                      Succeed Bonds Know Start |    Business Finance |
+|  216 |                      Succeed Lotto Know Start |    Business Finance |
+|  394 |          Simple things know start FOREX OFFER |    Business Finance |
+|  485 |                                   Know Trader |    Business Finance |
+|  811 |                      Double Entry Bookkeeping |    Business Finance |
+|  949 | Public Speaking Great Financial Presentations |    Business Finance |
+| 1113 |       Financial Analysis Scratch Professional |    Business Finance |
+| 2090 | Blues Master Advanced Techniques Piano Course | Musical Instruments |
+| 2163 |                            Piano Skills TODAY | Musical Instruments |
+| 3074 |                   Learn jQuery Example Course |     Web Development |
 
 
 
-
-
-- Nilai Skor precision menggunakan Cosine Similarity adalah 70.0%.Nilai ini didapatkan dari quary_input dan cosine_result dikalikan 100%.
+- Nilai Skor precision menggunakan Cosine Similarity adalah 70.0%.Nilai ini didapatkan dari quary_input dan cosine_result dikalikan 100%.Dimana nilai adalah (0,7/10)*100% didapatkan 70%.
  
  
 
 
 # Kesimpulan
-Dapat disumpulkan model ini, nampak bahwa nilai _precision_ dari model KNN sudah cukup baik dengan skor mencapai 70.0% dan 67.7% pada sistem rekomendasi yang menggunakan _cosine similarity_,masih ada beberapa kekurangan dari model yang dibuat seperti yang terlihat pada skor Precision. Untuk memperbaikinya dapat digunakan algoritma untuk membuat model rekomendasi yang lain seperti menggunakan deep learning lalu dibandingkan performanya dengan model KNN saat ini.
+Dapat disumpulkan model ini, nampak bahwa nilai _precision_ dari model KNN sudah cukup baik dengan skor mencapai 70 % dan 100% pada sistem rekomendasi yang menggunakan _cosine similarity_,masih ada beberapa kekurangan dari model yang dibuat seperti yang terlihat pada skor Precision. Untuk memperbaikinya dapat digunakan algoritma untuk membuat model rekomendasi yang lain seperti menggunakan deep learning lalu dibandingkan performanya dengan model KNN saat ini.
 
 # Referensi
 
