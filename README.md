@@ -219,11 +219,12 @@ Untuk mengukur kinerja sistem rekomendasi dengan model KNN dan _cosine similarit
 
 *_Precision_ adalah metrik yang dapat digunakan pada kasus klasterisasi untuk menghitung jumlah item rekomendasi yang relevan (_similar_) dengan kategori item yang dipilih. Perhitungan nilai _precision_ dapat menggunakan rumus berikut [[4](https://towardsdatascience.com/evaluating-clustering-results-f13552ee7603)].
 
-$$P = (op)/( tpo) $$
+__P = (op)/( tpo) 100%__
+ 
 
  - Nilai P adalah recommender system precision yang mana tingkat ketepatan antara informasi yang diminta oleh pengguna dengan jawaban yang diberikan oleh sistem.
-- Nilai op adalah rekomendasi yang relevan
-- Nilai tpo adalah nilai item yang  rekomendasikan
+- Nilai op adalah rekomendasi yang relevan.
+- Nilai tpo adalah nilai item yang  rekomendasikan.
 
 **Bagaimana Cara penerapannya ?**
 
@@ -239,7 +240,7 @@ Untuk quary input mengambil data nomor ke 500.
 
 
 Penerapan pada kode dilakukan secara manual. Fungsi yang dibuat menerima argumen berupa kueri input yang nantinya akan dicocokan dengan hasil sistem rekomendasi berdasarkan subjeknya. Berikut adalah hasil implementasinya dengan menggunakan rumus :
-  __Presisi = TP/(FP+TP) * 100%__
+ 
 
 
 Hasil dari knn_result yang berasal dari course_title dan subject
@@ -277,7 +278,7 @@ Hasil dari knn_result yang berasal dari course_title dan subject
 | 2255 |                                               | Musical Instruments |
 | 2475 |                                               | Musical Instruments |
 
-- Nilai Skor precision menggunakan K-Nearest Neighbor adalah 67.74193548387096%.Nilai ini didapatkan dari quary_input dan knn_result dikalikan 100%.
+- Nilai Skor precision menggunakan K-Nearest Neighbor adalah 67.7%.Nilai ini didapatkan dari quary_input dan knn_result dikalikan 100%.
 
   
 Hasil dari cosine result yang berasal dari course_title dan subject
