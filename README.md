@@ -228,8 +228,7 @@ $$P = (op)/( tpo) $$
 **Bagaimana Cara penerapannya ?**
 
 Cara kerjanya adalah dengan membagi nilai item yang relevan dengan nilai jumlah item yang direkomendasikan.
-Fitur yang relevan pada  adalah 10 dengan jumlah total top-N adalah 10, apabila dimasukkan kedalam rumus maka akan menjadi seperti berikut : releven/jumlah item rekomendasi = 10/10 = 1 berarti precisionnya adalah 100%. 
-
+Fitur yang relevan pada  adalah 10 dengan jumlah total top-N adalah 10, apabila dimasukkan kedalam rumus maka akan menjadi seperti berikut : releven/jumlah item rekomendasi = 10/10 = 1 berarti precisionnya 1 = 100
 Kelebihan dari metriks ini berfokus pada bagaimana performa (prediksi) model terhadap label data positif, kekurangannya metriks ini tidak memperhitungkan label negatifnya,untuk rumus sendiri.
 
 Untuk quary input mengambil data nomor ke 500.
