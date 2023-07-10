@@ -258,7 +258,7 @@ Hasil dari knn_result yang berasal dari course_title dan subject yang mana dipil
 | 811 | Double Entry Bookkeeping | Business Finance |
 | 875 |                          | Business Finance |
 
-- Nilai Skor precision menggunakan K-Nearest Neighbor adalah 100%.Nilai ini didapatkan dari quary_input dan knn_result dikalikan 100%.Dimana nilai adalah (10/10)*100% didapatkan 100%
+- Nilai Skor precision menggunakan K-Nearest Neighbor adalah 100%.Nilai ini didapatkan dari quary_input dan knn_result dikalikan 100%.Dimana nilai adalah (10/10)*100% menghasilkan 100%
 
   
 Hasil dari cosine result yang berasal dari course_title dan subject yang mana sama dengan knn_result diambilkan 10 course secara rendom.
@@ -277,7 +277,7 @@ Hasil dari cosine result yang berasal dari course_title dan subject yang mana sa
 
 
 
-- Nilai Skor precision menggunakan Cosine Similarity adalah 70.0%.Nilai ini didapatkan dari quary_input dan cosine_result dikalikan 100%.Dimana nilai adalah (0,7/10)*100% didapatkan 70%.
+- Nilai Skor precision menggunakan Cosine Similarity adalah 70.0%.Nilai ini didapatkan dari quary_input dan cosine_result dikalikan 100%.Dimana nilai adalah (7/10)*100% menghasilkan 70%.
  
  
 
