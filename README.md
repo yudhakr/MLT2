@@ -21,6 +21,13 @@ Berikut tujuan dari proyek ini:
 - Membuat sistem rekomendasi kursus *Online* untuk pengguna di Udemy.
 - Memberikan rekomendasi untuk kursus *Online* Udemy berdasarkan kriteria yang diinginkan pengguna.
 
+### Manfaat
+Berikut manfaat dari segi pengguna dan bisnis dari proyek ini :
+- Meningkatnya loyalitas pengguna ( user) dalam pengguna Udemy Courses.
+- Meningkatan pembelian kursus yang ada di Udemy Courses.
+- Meningkatnya penggunaan intensif terhadap platfrom
+- Pengguna tidak merasa kebingungan ketika memilih course yang sesuai apa yang diminati
+
 
 ### Solution Approach
 
