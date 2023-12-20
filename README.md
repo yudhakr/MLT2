@@ -290,7 +290,7 @@ Hasil dari cosine result yang berasal dari course_title dan subject yang mana sa
 
 
 # Kesimpulan
-Dapat disumpulkan model ini, nampak bahwa nilai _precision_ dari model KNN sudah cukup baik dengan skor mencapai 70 % dan 100% pada sistem rekomendasi yang menggunakan _cosine similarity_,masih ada beberapa kekurangan dari model yang dibuat seperti yang terlihat pada skor Precision. Untuk memperbaikinya dapat digunakan algoritma untuk membuat model rekomendasi yang lain seperti menggunakan deep learning lalu dibandingkan performanya dengan model KNN saat ini.
+Dapat disumpulkan model ini, nampak bahwa nilai _precision_ dari model KNN sudah cukup baik dengan skor mencapai  100% pada sistem rekomendasi yang menggunakan _cosine similarity_,masih ada beberapa kekurangan dari model yang dibuat seperti yang terlihat pada skor Precision. Untuk memperbaikinya dapat digunakan algoritma untuk membuat model rekomendasi yang lain seperti menggunakan deep learning lalu dibandingkan performanya dengan model KNN saat ini.
 
 # Referensi
 
